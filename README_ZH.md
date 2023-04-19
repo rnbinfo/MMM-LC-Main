@@ -10,7 +10,7 @@
 本项目是由四个基础模块共同组成，缺一不可，如果需要安装则需要把
 `MMM-LC-Main,MMM-LC-LPCM,MMM-LC-HotWord,MMM-LC-Text2Speech`四个项目一起安装在MagicMirror的modules目录下面。
 
-LC是我们人工智能小助理Little Carrie简称
+LC是我们人工智能小助理Little Carrie简称，人工智能处理逻辑我们使用了chatgpt，你可以选择使用任何其他智能引擎
 
 ## 模块说明
 
