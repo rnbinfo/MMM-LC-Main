@@ -42,6 +42,7 @@ Module.register("MMM-LC-Main",{
 	socketNotificationReceived: function (notification, payload) {
 		var self = this;
 		if(notification === "stop-speech2text") {
+			//you can  send notification to any module you want handle with these text
 			self.sendNotification("littleCarrie",payload);
 		}
 
