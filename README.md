@@ -11,6 +11,8 @@ This project consists of four basic modules that are essential for its operation
 
 LC is our AI assistant, whose full name is Little Carrie.
 
+LittleCarrie's AI processing logic is currently implemented using ChatGPT, a large language model trained by OpenAI that is based on the GPT-3.5 architecture. However, users can choose to use any other AI processing engine that they prefer.
+
 # Module Description
 | modules          | Description
 |----------------- |-----------
