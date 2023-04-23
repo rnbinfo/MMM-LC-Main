@@ -1,3 +1,10 @@
+/* Magic Mirror
+ * Node Helper: MMM-MWWordOfTheDay
+ *
+ * By bittiez
+ * MIT Licensed.
+ */
+
 var NodeHelper = require("node_helper");
 
 const chatgpt = require("./chatgpt.js");
@@ -20,6 +27,7 @@ module.exports = NodeHelper.create({
 		if (notification === "start-speech2text") {
 
 			let payload = await speech2text.actions.transcript();
+			// let payload = "你好";
 			this.sendSocketNotification("stop-speech2text",payload);
 			await chatgpt.actions.init();
 			let reply = await chatgpt.actions.getReply(payload);
@@ -27,7 +35,6 @@ module.exports = NodeHelper.create({
 			this.sendSocketNotification("stop-chatgpt",reply);
 
 		}
-
 	}
 
 });

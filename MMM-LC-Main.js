@@ -8,23 +8,33 @@ Module.register("MMM-LC-Main",{
 	requiresVersion: "2.1.0",
 
 	start: function() {
-		var self = this;
-		var dataNotification = null;
-
-		// Schedule update timer.
-		this.getData();
-		setInterval(function() {
-			self.updateDom();
-		}, this.config.updateInterval);
+		// var self = this;
+		// var dataNotification = null;
+		//
+		// // Schedule update timer.
+		// this.getData();
+		// setInterval(function() {
+		// 	self.updateDom();
+		// }, this.config.updateInterval);
 	},
 
-	getScripts: function() {
+	getScripts: function () {
+		return [];
 	},
 
-	getStyles: function() {
+	/**
+	 * Returns a list of stylesheets the module requires to be loaded.
+	 *
+	 * @returns {string[]} An array with filenames.
+	 */
+	getStyles: function () {
+		return [];
 	},
 
 	getData: function() {
+		//send to node_helper
+		// this.sendSocketNotification("start-speech2text", null);
+		// this.sendNotification("init-hotword");
 	},
 
 	scheduleUpdate: function(delay) {
@@ -42,7 +52,6 @@ Module.register("MMM-LC-Main",{
 	socketNotificationReceived: function (notification, payload) {
 		var self = this;
 		if(notification === "stop-speech2text") {
-			//you can  send notification to any module you want handle with these text
 			self.sendNotification("littleCarrie",payload);
 		}
 
@@ -56,9 +65,6 @@ Module.register("MMM-LC-Main",{
 		}
 	},
 
-	// Override dom generator.
-	getDom: function() {
-	},
 
 	// Override notification handler.
 	notificationReceived: function (notification, payload, sender) {
